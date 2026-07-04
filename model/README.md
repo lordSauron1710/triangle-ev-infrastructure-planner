@@ -30,7 +30,8 @@ python model/optimize.py
 ```
 
 The solver writes versioned scenario outputs to
-`src/data/generatedPlans.json`, which the dashboard imports at build time.
+`src/versions/v1/data/generatedPlans.json`, which the v1 dashboard imports at
+build time.
 
 The current input dataset is deliberately transparent and illustrative. Public
 NREL, Census, traffic, utility, and NCDOT inputs will replace these assumptions

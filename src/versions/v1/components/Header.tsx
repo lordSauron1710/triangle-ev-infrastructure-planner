@@ -1,23 +1,29 @@
 import { CircleHelp, Github, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navigation = ["Overview", "Network", "Scenarios", "Method"];
 
 export function Header() {
   return (
     <header className="site-header">
-      <a className="brand" href="#overview" aria-label="EV Infrastructure Planner home">
-        <span className="brand-mark" aria-hidden="true">
-          <Zap size={17} strokeWidth={2.4} />
-        </span>
-        <span>EV Infrastructure Planner</span>
-      </a>
+      <div className="brand-cluster">
+        <Link className="brand" to="/v1#overview" aria-label="EV Infrastructure Planner v1">
+          <span className="brand-mark" aria-hidden="true">
+            <Zap size={17} strokeWidth={2.4} />
+          </span>
+          <span>EV Infrastructure Planner</span>
+        </Link>
+        <Link className="version-link" to="/v0">
+          v0 story
+        </Link>
+      </div>
 
       <nav aria-label="Primary navigation">
         {navigation.map((item, index) => (
           <a
             key={item}
             className={index === 0 ? "active" : ""}
-            href={`#${item.toLowerCase()}`}
+            href={`/v1#${item.toLowerCase()}`}
           >
             {item}
           </a>
@@ -27,14 +33,14 @@ export function Header() {
       <div className="header-actions">
         <a
           className="icon-link"
-          href="#method"
+          href="/v1#method"
           aria-label="About this case study"
         >
           <CircleHelp size={18} />
         </a>
         <a
           className="github-link"
-          href="https://github.com/"
+          href="https://github.com/lordSauron1710/triangle-ev-infrastructure-planner"
           target="_blank"
           rel="noreferrer"
         >

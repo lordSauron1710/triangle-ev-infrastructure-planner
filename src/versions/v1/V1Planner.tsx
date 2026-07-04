@@ -9,6 +9,7 @@ import { StoryPanel } from "./components/StoryPanel";
 import { generatedPlans, scenarios } from "./data/caseStudy";
 import { runScenarioPlan } from "./model/planner";
 import type { ScenarioId } from "./types";
+import "./styles.css";
 
 const NetworkMap = lazy(() =>
   import("./components/NetworkMap").then((module) => ({
@@ -22,7 +23,7 @@ const TradeoffChart = lazy(() =>
   })),
 );
 
-export default function App() {
+export default function V1Planner() {
   const [selectedScenario, setSelectedScenario] =
     useState<ScenarioId>("baseline");
   const [annualCapital, setAnnualCapital] = useState(120);

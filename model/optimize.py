@@ -11,7 +11,7 @@ import pulp
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = Path(__file__).parent / "data" / "case_study.json"
-DEFAULT_OUTPUT = ROOT / "src" / "data" / "generatedPlans.json"
+DEFAULT_OUTPUT = ROOT / "src" / "versions" / "v1" / "data" / "generatedPlans.json"
 
 
 def miles_between(lat_1: float, lng_1: float, lat_2: float, lng_2: float) -> float:
