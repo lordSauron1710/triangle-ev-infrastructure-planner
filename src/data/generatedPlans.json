@@ -1,0 +1,255 @@
+{
+  "baseline": {
+    "status": "Optimal",
+    "coverage": 100,
+    "annualizedCost": 17,
+    "totalCapitalCost": 69.2,
+    "portsAdded": 165,
+    "gridUpgrades": 3,
+    "activeSiteIds": [
+      "durham-85",
+      "holly-springs",
+      "raleigh-mitchell"
+    ],
+    "commissionedPhase": {
+      "durham-85": 2,
+      "raleigh-mitchell": 3,
+      "holly-springs": 1
+    },
+    "portsBySite": {
+      "durham-85": 57,
+      "raleigh-mitchell": 54,
+      "holly-springs": 54
+    },
+    "upgradedSiteIds": [
+      "durham-85",
+      "holly-springs",
+      "raleigh-mitchell"
+    ],
+    "phasePlan": [
+      {
+        "phase": 1,
+        "year": 2026,
+        "sites": [
+          "holly-springs"
+        ],
+        "portsAdded": 54
+      },
+      {
+        "phase": 2,
+        "year": 2027,
+        "sites": [
+          "durham-85"
+        ],
+        "portsAdded": 42
+      },
+      {
+        "phase": 3,
+        "year": 2028,
+        "sites": [
+          "raleigh-mitchell"
+        ],
+        "portsAdded": 49
+      },
+      {
+        "phase": 4,
+        "year": 2030,
+        "sites": [],
+        "portsAdded": 20
+      }
+    ],
+    "objectiveValue": 1294.15
+  },
+  "accelerated": {
+    "status": "Optimal",
+    "coverage": 100,
+    "annualizedCost": 27,
+    "totalCapitalCost": 109.4,
+    "portsAdded": 205,
+    "gridUpgrades": 2,
+    "activeSiteIds": [
+      "apex-64",
+      "cary-40",
+      "durham-85",
+      "garner-40",
+      "raleigh-capital",
+      "rtp-54"
+    ],
+    "commissionedPhase": {
+      "durham-85": 3,
+      "rtp-54": 1,
+      "cary-40": 2,
+      "raleigh-capital": 3,
+      "garner-40": 4,
+      "apex-64": 4
+    },
+    "portsBySite": {
+      "durham-85": 16,
+      "rtp-54": 70,
+      "cary-40": 70,
+      "raleigh-capital": 20,
+      "garner-40": 14,
+      "apex-64": 15
+    },
+    "upgradedSiteIds": [
+      "cary-40",
+      "rtp-54"
+    ],
+    "phasePlan": [
+      {
+        "phase": 1,
+        "year": 2026,
+        "sites": [
+          "rtp-54"
+        ],
+        "portsAdded": 70
+      },
+      {
+        "phase": 2,
+        "year": 2027,
+        "sites": [
+          "cary-40"
+        ],
+        "portsAdded": 62
+      },
+      {
+        "phase": 3,
+        "year": 2028,
+        "sites": [
+          "durham-85",
+          "raleigh-capital"
+        ],
+        "portsAdded": 44
+      },
+      {
+        "phase": 4,
+        "year": 2030,
+        "sites": [
+          "garner-40",
+          "apex-64"
+        ],
+        "portsAdded": 29
+      }
+    ],
+    "objectiveValue": 1625.71
+  },
+  "grid-delay": {
+    "status": "Optimal",
+    "coverage": 71,
+    "annualizedCost": 15,
+    "totalCapitalCost": 61.1,
+    "portsAdded": 97,
+    "gridUpgrades": 1,
+    "activeSiteIds": [
+      "cary-40",
+      "holly-springs",
+      "raleigh-capital",
+      "rtp-54"
+    ],
+    "commissionedPhase": {
+      "rtp-54": 3,
+      "cary-40": 2,
+      "raleigh-capital": 1,
+      "holly-springs": 4
+    },
+    "portsBySite": {
+      "rtp-54": 22,
+      "cary-40": 20,
+      "raleigh-capital": 20,
+      "holly-springs": 35
+    },
+    "upgradedSiteIds": [
+      "holly-springs"
+    ],
+    "phasePlan": [
+      {
+        "phase": 1,
+        "year": 2026,
+        "sites": [
+          "raleigh-capital"
+        ],
+        "portsAdded": 20
+      },
+      {
+        "phase": 2,
+        "year": 2027,
+        "sites": [
+          "cary-40"
+        ],
+        "portsAdded": 20
+      },
+      {
+        "phase": 3,
+        "year": 2028,
+        "sites": [
+          "rtp-54"
+        ],
+        "portsAdded": 22
+      },
+      {
+        "phase": 4,
+        "year": 2030,
+        "sites": [
+          "holly-springs"
+        ],
+        "portsAdded": 35
+      }
+    ],
+    "objectiveValue": 3657.95
+  },
+  "capital-constrained": {
+    "status": "Optimal",
+    "coverage": 79,
+    "annualizedCost": 14,
+    "totalCapitalCost": 54.5,
+    "portsAdded": 127,
+    "gridUpgrades": 2,
+    "activeSiteIds": [
+      "durham-85",
+      "rtp-54"
+    ],
+    "commissionedPhase": {
+      "durham-85": 3,
+      "rtp-54": 1
+    },
+    "portsBySite": {
+      "durham-85": 57,
+      "rtp-54": 70
+    },
+    "upgradedSiteIds": [
+      "durham-85",
+      "rtp-54"
+    ],
+    "phasePlan": [
+      {
+        "phase": 1,
+        "year": 2026,
+        "sites": [
+          "rtp-54"
+        ],
+        "portsAdded": 22
+      },
+      {
+        "phase": 2,
+        "year": 2027,
+        "sites": [],
+        "portsAdded": 40
+      },
+      {
+        "phase": 3,
+        "year": 2028,
+        "sites": [
+          "durham-85"
+        ],
+        "portsAdded": 24
+      },
+      {
+        "phase": 4,
+        "year": 2030,
+        "sites": [],
+        "portsAdded": 41
+      }
+    ],
+    "objectiveValue": 3340.99
+  }
+}

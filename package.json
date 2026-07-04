@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "check": "tsc -b"
+    "check": "tsc -b",
+    "model:generate": "python3 model/optimize.py",
+    "model:test": "python3 -m unittest discover -s model -p \"test_*.py\""
   },
   "dependencies": {
     "leaflet": "^1.9.4",

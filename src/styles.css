@@ -315,6 +315,13 @@ h1 {
   background: #f4f7f8;
 }
 
+.loading-panel {
+  display: grid;
+  place-items: center;
+  color: var(--blue-gray);
+  font-size: 12px;
+}
+
 .network-map {
   width: 100%;
   height: 100%;
@@ -624,7 +631,7 @@ input[type="range"] {
 
 .timeline-years {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 0 8px 112px;
   color: var(--blue-gray);
   font-size: 10px;
@@ -668,7 +675,7 @@ input[type="range"] {
   display: flex;
   align-items: center;
   background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
-  background-size: 20% 100%;
+  background-size: 25% 100%;
 }
 
 .phase-bar {

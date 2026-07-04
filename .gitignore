@@ -1,5 +1,8 @@
 node_modules
 dist
+.venv
+__pycache__
+*.pyc
 .DS_Store
 *.tsbuildinfo
 .env
@@ -8,3 +11,4 @@ dist
 tmp
 *.pdf
 *.xlsx
+!archive/v0/original-excel-model.xlsx

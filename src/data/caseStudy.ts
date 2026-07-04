@@ -1,4 +1,15 @@
-import type { CandidateSite, ScenarioDefinition } from "../types";
+import generatedPlanData from "./generatedPlans.json";
+import type {
+  CandidateSite,
+  GeneratedPlan,
+  ScenarioDefinition,
+  ScenarioId,
+} from "../types";
+
+export const generatedPlans = generatedPlanData as Record<
+  ScenarioId,
+  GeneratedPlan
+>;
 
 export const scenarios: ScenarioDefinition[] = [
   {
@@ -6,10 +17,10 @@ export const scenarios: ScenarioDefinition[] = [
     name: "Baseline",
     shortName: "Baseline",
     description: "Balanced demand growth, capital availability, and interconnection pace.",
-    baseCoverage: 92,
-    baseCost: 116,
-    basePorts: 428,
-    baseGridUpgrades: 9,
+    baseCoverage: generatedPlans.baseline.coverage,
+    baseCost: generatedPlans.baseline.annualizedCost,
+    basePorts: generatedPlans.baseline.portsAdded,
+    baseGridUpgrades: generatedPlans.baseline.gridUpgrades,
     insight: "Build the spine first, then close coverage gaps as adoption compounds.",
   },
   {
@@ -17,10 +28,10 @@ export const scenarios: ScenarioDefinition[] = [
     name: "Accelerated adoption",
     shortName: "Accelerated",
     description: "Faster EV adoption increases peak demand and advances capacity additions.",
-    baseCoverage: 97,
-    baseCost: 158,
-    basePorts: 572,
-    baseGridUpgrades: 13,
+    baseCoverage: generatedPlans.accelerated.coverage,
+    baseCost: generatedPlans.accelerated.annualizedCost,
+    basePorts: generatedPlans.accelerated.portsAdded,
+    baseGridUpgrades: generatedPlans.accelerated.gridUpgrades,
     insight: "Earlier grid commitments prevent high-utilization sites from becoming bottlenecks.",
   },
   {
@@ -28,10 +39,10 @@ export const scenarios: ScenarioDefinition[] = [
     name: "Grid delay",
     shortName: "Grid delay",
     description: "Transformer and feeder upgrades arrive one phase later than planned.",
-    baseCoverage: 76,
-    baseCost: 95,
-    basePorts: 316,
-    baseGridUpgrades: 6,
+    baseCoverage: generatedPlans["grid-delay"].coverage,
+    baseCost: generatedPlans["grid-delay"].annualizedCost,
+    basePorts: generatedPlans["grid-delay"].portsAdded,
+    baseGridUpgrades: generatedPlans["grid-delay"].gridUpgrades,
     insight: "Portable capacity and alternate sites preserve service while upgrades catch up.",
   },
   {
@@ -39,10 +50,10 @@ export const scenarios: ScenarioDefinition[] = [
     name: "Capital constrained",
     shortName: "Capital constrained",
     description: "Lower annual capital forces stricter sequencing and fewer parallel builds.",
-    baseCoverage: 82,
-    baseCost: 72,
-    basePorts: 274,
-    baseGridUpgrades: 5,
+    baseCoverage: generatedPlans["capital-constrained"].coverage,
+    baseCost: generatedPlans["capital-constrained"].annualizedCost,
+    basePorts: generatedPlans["capital-constrained"].portsAdded,
+    baseGridUpgrades: generatedPlans["capital-constrained"].gridUpgrades,
     insight: "Prioritize corridor hubs with the highest demand served per dollar invested.",
   },
 ];

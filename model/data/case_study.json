@@ -1,0 +1,186 @@
+{
+  "planning_phases": [2026, 2027, 2028, 2030],
+  "demand_growth_by_phase": [0.62, 0.76, 0.88, 1.0],
+  "service_units_per_port": 1.65,
+  "sites": [
+    {
+      "id": "durham-85",
+      "name": "I-85 / Guess Road",
+      "lat": 36.039,
+      "lng": -78.907,
+      "existing_ports": 8,
+      "fixed_cost_m": 7.8,
+      "port_cost_m": 0.22,
+      "grid_cost_m": 4.8,
+      "grid_base_ports": 24,
+      "grid_extra_ports": 44,
+      "max_ports": 68
+    },
+    {
+      "id": "rtp-54",
+      "name": "NC-54 / Research Triangle Park",
+      "lat": 35.902,
+      "lng": -78.865,
+      "existing_ports": 6,
+      "fixed_cost_m": 8.4,
+      "port_cost_m": 0.24,
+      "grid_cost_m": 4.2,
+      "grid_base_ports": 28,
+      "grid_extra_ports": 48,
+      "max_ports": 76
+    },
+    {
+      "id": "cary-40",
+      "name": "I-40 / Harrison Avenue",
+      "lat": 35.809,
+      "lng": -78.782,
+      "existing_ports": 10,
+      "fixed_cost_m": 9.2,
+      "port_cost_m": 0.25,
+      "grid_cost_m": 5.1,
+      "grid_base_ports": 30,
+      "grid_extra_ports": 50,
+      "max_ports": 80
+    },
+    {
+      "id": "raleigh-capital",
+      "name": "Capital Boulevard / I-440",
+      "lat": 35.836,
+      "lng": -78.582,
+      "existing_ports": 12,
+      "fixed_cost_m": 10.5,
+      "port_cost_m": 0.27,
+      "grid_cost_m": 6.8,
+      "grid_base_ports": 32,
+      "grid_extra_ports": 48,
+      "max_ports": 80
+    },
+    {
+      "id": "raleigh-mitchell",
+      "name": "US-1 / Mitchell Mill Road",
+      "lat": 35.891,
+      "lng": -78.545,
+      "existing_ports": 4,
+      "fixed_cost_m": 6.9,
+      "port_cost_m": 0.21,
+      "grid_cost_m": 4.7,
+      "grid_base_ports": 20,
+      "grid_extra_ports": 40,
+      "max_ports": 60
+    },
+    {
+      "id": "garner-40",
+      "name": "I-40 / US-70",
+      "lat": 35.704,
+      "lng": -78.601,
+      "existing_ports": 4,
+      "fixed_cost_m": 7.1,
+      "port_cost_m": 0.22,
+      "grid_cost_m": 4.9,
+      "grid_base_ports": 22,
+      "grid_extra_ports": 42,
+      "max_ports": 64
+    },
+    {
+      "id": "chapel-hill-15",
+      "name": "US-15 / Fordham Boulevard",
+      "lat": 35.927,
+      "lng": -79.025,
+      "existing_ports": 6,
+      "fixed_cost_m": 8.7,
+      "port_cost_m": 0.25,
+      "grid_cost_m": 4.3,
+      "grid_base_ports": 24,
+      "grid_extra_ports": 40,
+      "max_ports": 64
+    },
+    {
+      "id": "apex-64",
+      "name": "US-64 / NC-55",
+      "lat": 35.738,
+      "lng": -78.845,
+      "existing_ports": 4,
+      "fixed_cost_m": 7.5,
+      "port_cost_m": 0.22,
+      "grid_cost_m": 4.5,
+      "grid_base_ports": 22,
+      "grid_extra_ports": 42,
+      "max_ports": 64
+    },
+    {
+      "id": "wake-forest",
+      "name": "US-1 / NC-98",
+      "lat": 35.971,
+      "lng": -78.531,
+      "existing_ports": 2,
+      "fixed_cost_m": 6.6,
+      "port_cost_m": 0.2,
+      "grid_cost_m": 5.8,
+      "grid_base_ports": 18,
+      "grid_extra_ports": 38,
+      "max_ports": 56
+    },
+    {
+      "id": "holly-springs",
+      "name": "NC-55 / Main Street",
+      "lat": 35.651,
+      "lng": -78.835,
+      "existing_ports": 2,
+      "fixed_cost_m": 6.4,
+      "port_cost_m": 0.2,
+      "grid_cost_m": 3.9,
+      "grid_base_ports": 18,
+      "grid_extra_ports": 38,
+      "max_ports": 56
+    }
+  ],
+  "demand_zones": [
+    { "id": "north-durham", "lat": 36.02, "lng": -78.91, "final_demand": 28 },
+    { "id": "central-durham", "lat": 35.99, "lng": -78.9, "final_demand": 36 },
+    { "id": "rtp", "lat": 35.91, "lng": -78.84, "final_demand": 42 },
+    { "id": "west-raleigh", "lat": 35.79, "lng": -78.72, "final_demand": 40 },
+    { "id": "north-raleigh", "lat": 35.88, "lng": -78.64, "final_demand": 38 },
+    { "id": "east-raleigh", "lat": 35.81, "lng": -78.55, "final_demand": 30 },
+    { "id": "cary", "lat": 35.79, "lng": -78.79, "final_demand": 34 },
+    { "id": "apex", "lat": 35.73, "lng": -78.85, "final_demand": 24 },
+    { "id": "garner", "lat": 35.7, "lng": -78.62, "final_demand": 22 }
+  ],
+  "scenarios": [
+    {
+      "id": "baseline",
+      "demand_multiplier": 1.0,
+      "phase_budget_m": 22,
+      "max_drive_miles": 20,
+      "max_new_sites_per_phase": 1,
+      "grid_capacity_multiplier": 1.0,
+      "first_upgrade_phase": 0
+    },
+    {
+      "id": "accelerated",
+      "demand_multiplier": 1.35,
+      "phase_budget_m": 30,
+      "max_drive_miles": 20,
+      "max_new_sites_per_phase": 2,
+      "grid_capacity_multiplier": 1.0,
+      "first_upgrade_phase": 0
+    },
+    {
+      "id": "grid-delay",
+      "demand_multiplier": 1.0,
+      "phase_budget_m": 18,
+      "max_drive_miles": 20,
+      "max_new_sites_per_phase": 1,
+      "grid_capacity_multiplier": 0.5,
+      "first_upgrade_phase": 3
+    },
+    {
+      "id": "capital-constrained",
+      "demand_multiplier": 1.0,
+      "phase_budget_m": 14,
+      "max_drive_miles": 20,
+      "max_new_sites_per_phase": 1,
+      "grid_capacity_multiplier": 1.0,
+      "first_upgrade_phase": 0
+    }
+  ]
+}

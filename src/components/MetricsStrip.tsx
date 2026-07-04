@@ -34,8 +34,8 @@ export function MetricsStrip({ result }: MetricsStripProps) {
   ];
 
   return (
-    <section className="metrics-strip" aria-label="Illustrative model results">
-      <p className="illustrative-label">Illustrative model results</p>
+    <section className="metrics-strip" aria-label="MILP scenario results">
+      <p className="illustrative-label">MILP scenario results</p>
       {metrics.map(({ label, value, detail, icon: Icon }) => (
         <article key={label}>
           <span className="metric-icon">

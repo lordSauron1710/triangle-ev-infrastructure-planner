@@ -36,3 +36,25 @@ export interface PlanResult {
   gridUpgrades: number;
   activeSites: CandidateSite[];
 }
+
+export interface PhasePlan {
+  phase: number;
+  year: number;
+  sites: string[];
+  portsAdded: number;
+}
+
+export interface GeneratedPlan {
+  status: string;
+  coverage: number;
+  annualizedCost: number;
+  totalCapitalCost: number;
+  portsAdded: number;
+  gridUpgrades: number;
+  activeSiteIds: string[];
+  commissionedPhase: Record<string, number>;
+  portsBySite: Record<string, number>;
+  upgradedSiteIds: string[];
+  phasePlan: PhasePlan[];
+  objectiveValue: number;
+}

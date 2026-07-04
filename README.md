@@ -4,10 +4,10 @@ An interactive operations-research case study exploring where, when, and how
 much EV fast-charging capacity to build in the Raleigh–Durham region.
 
 This repository rebuilds an NCSU ISE 501 class project as a reproducible,
-code-first decision product. The current release establishes the dashboard,
-scenario experience, and portfolio narrative. Its numerical outputs are
-explicitly illustrative while the full mixed-integer optimization and public
-data pipeline are being developed.
+code-first decision product. Version 1 includes a mixed-integer optimization
+model, generated scenario outputs, an interactive dashboard, and a documented
+portfolio narrative. Input assumptions remain illustrative while the public
+data pipeline is developed.
 
 ## Product story
 
@@ -40,16 +40,19 @@ npm run preview
 ```text
 src/
   components/     Interface and storytelling components
-  data/           Illustrative sites, demand zones, and scenarios
-  model/          Deterministic scenario engine
+  data/           Sites, demand zones, scenarios, and generated plans
+  model/          Browser-side sensitivity logic
   App.tsx         Product workflow and state
+model/
+  data/           Auditable optimization inputs
+  optimize.py     Multi-period mixed-integer model
+archive/v0/       Original team Excel model and provenance
 design/           Accepted dashboard design concept
 ```
 
-## Optimization roadmap
+## Optimization model
 
-The production model will replace the illustrative engine with a reproducible
-mixed-integer program:
+The v1 mixed-integer program includes:
 
 - Binary site activation by phase
 - Charger-type and port-capacity decisions
@@ -60,13 +63,24 @@ mixed-integer program:
 - Charger/transformer procurement lead times
 - Robust scenarios for EV adoption and interconnection delay
 
+Run it with:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r model/requirements.txt
+python model/optimize.py
+```
+
+Run `npm run model:test` inside the activated Python environment to validate
+optimality and output reconciliation.
+
 Planned public inputs include NREL Alternative Fuel Stations data, Census or
 employment demand proxies, traffic counts, and NCDOT NEVI corridor data.
 
 ## Academic provenance
 
-The original course report and workbook were produced as a team project for
-ISE 501 at NC State. They remain in the local working archive but are excluded
-from the public repository because they contain other students' work and
-identifying information. This code-first rebuild is a subsequent portfolio
-development effort.
+The original course workbook was produced as a team project for ISE 501 at NC
+State and is preserved unchanged in [`archive/v0`](archive/v0). The archive
+contains explicit team attribution and is separated from the subsequent
+code-first portfolio rebuild.
