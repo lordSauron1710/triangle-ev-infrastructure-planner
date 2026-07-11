@@ -67,13 +67,6 @@ export default function V0CaseStudy() {
         onStepChange={setTutorialStep}
         onClose={() => setTutorialOpen(false)}
       />
-      <footer className="v0-footer">
-        <span>
-          Archived workbook · Sandeep Vangara, Raveena Rajeswari Pandiyaraj,
-          Astha Pund, Saumitra Ranjan, Syed Aakif Zaid
-        </span>
-        <span>Workbook preserved unchanged in archive/v0</span>
-      </footer>
     </div>
   );
 }
