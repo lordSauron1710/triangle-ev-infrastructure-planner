@@ -39,7 +39,7 @@ export function ScenarioExplorer() {
         <span>Workbook Sheet3 rows 34–45</span>
       </div>
 
-      <div className="scenario-tabs" role="tablist" aria-label="Version zero scenarios">
+      <div className="scenario-tabs" role="tablist" aria-label="Scenario outputs">
         {v0Scenarios.map((item) => (
           <button
             key={item.key}

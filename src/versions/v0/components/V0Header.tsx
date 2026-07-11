@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function V0Header() {
   return (
     <header className="v0-header">
-      <Link className="v0-brand" to="/v0" aria-label="EV Infrastructure Planner v0">
+      <Link className="v0-brand" to="/v0" aria-label="EV Infrastructure Planner">
         <span aria-hidden="true">
           <Zap size={15} strokeWidth={2.3} />
         </span>

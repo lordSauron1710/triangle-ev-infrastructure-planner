@@ -21,7 +21,7 @@ export function Lessons() {
         <article>
           <h2>
             <CheckCircle2 size={23} />
-            What v0 demonstrated
+            What the model demonstrates
           </h2>
           <ul>
             {demonstrated.map((item) => (

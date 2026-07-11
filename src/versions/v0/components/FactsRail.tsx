@@ -9,7 +9,7 @@ const facts = [
 
 export function FactsRail() {
   return (
-    <section className="facts-rail" aria-label="Version zero model scope">
+    <section className="facts-rail" aria-label="Model scope">
       {facts.map(({ value, label, icon: Icon }) => (
         <div key={label}>
           <Icon size={25} strokeWidth={1.7} />
