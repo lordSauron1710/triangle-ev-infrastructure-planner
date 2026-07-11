@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 
 const steps = [
@@ -7,6 +7,12 @@ const steps = [
     eyebrow: "Start",
     title: "Read the operations problem first",
     body: "This page explains a capacity-planning model for Raleigh EV charging: decide where capacity is installed, how many ports are allocated, and when extra ports are added while minimizing cost.",
+  },
+  {
+    target: "problem",
+    eyebrow: "Decision",
+    title: "Start with the operations problem",
+    body: "The planner must meet location-level charging demand in every period by coordinating station decisions, allocated ports, and added ports at minimum modeled cost.",
   },
   {
     target: "inputs",
@@ -18,19 +24,19 @@ const steps = [
     target: "model",
     eyebrow: "Formulation",
     title: "Translate the planning question into math",
-    body: "The objective minimizes installation, operating, and expansion cost. The constraints enforce demand satisfaction, capacity limits, port balance, and decision domains.",
+    body: "The objective minimizes installation, operating, and expansion cost. The stated formulation covers demand, capacity, port balance, initial conditions, and decision domains; recorded outputs are audited separately for feasibility.",
   },
   {
     target: "scenarios",
     eyebrow: "Outputs",
     title: "See how the plan responds",
-    body: "Use the tabs to compare four planning conditions and see how demand, cost, and capacity assumptions change the investment mix and port decisions.",
+    body: "Use the tabs to compare four planning conditions and see how changes to demand, cost, or capacity affect total cost and aggregate port decisions.",
   },
   {
     target: "lessons",
     eyebrow: "Next",
     title: "Finish with interpretation and planned improvements",
-    body: "The final section separates what this model demonstrates from planned improvements such as real geography, persistent installs, public data, and a reproducible optimization pipeline.",
+    body: "The final section separates what the model demonstrates from planned improvements such as feasibility validation, persistent installations, richer energy assumptions, and a reproducible optimization pipeline.",
   },
 ];
 
@@ -48,6 +54,19 @@ export function TutorialOverlay({
   onClose,
 }: TutorialOverlayProps) {
   const step = steps[stepIndex] ?? steps[0];
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!active) {
+      return;
+    }
+
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    closeButtonRef.current?.focus();
+
+    return () => previousFocusRef.current?.focus();
+  }, [active]);
 
   useEffect(() => {
     document.querySelectorAll("[data-tour-current]").forEach((element) => {
@@ -91,8 +110,8 @@ export function TutorialOverlay({
   return (
     <div className="tutorial-overlay" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
       <div className="tutorial-scrim" onClick={onClose} />
-      <article className="tutorial-card">
-        <button className="tutorial-close" type="button" onClick={onClose} aria-label="Close tutorial">
+      <article className="tutorial-card" aria-live="polite">
+        <button ref={closeButtonRef} className="tutorial-close" type="button" onClick={onClose} aria-label="Close tutorial">
           <X size={17} />
         </button>
         <p className="tutorial-eyebrow">
@@ -106,6 +125,7 @@ export function TutorialOverlay({
               key={item.target}
               type="button"
               aria-label={`Go to tutorial step ${index + 1}`}
+              aria-current={index === stepIndex ? "step" : undefined}
               className={index === stepIndex ? "selected" : ""}
               onClick={() => onStepChange(index)}
             />

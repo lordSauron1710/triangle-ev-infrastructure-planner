@@ -478,7 +478,12 @@
 }
 
 .planning-question {
-  border-right: 1px solid var(--v0-line);
+  border-bottom: 1px solid var(--v0-line);
+  scroll-margin-top: 70px;
+}
+
+.model-only {
+  grid-template-columns: 1fr;
 }
 
 .v0-page h2 {
@@ -532,6 +537,46 @@
   margin-bottom: 5px;
   color: var(--v0-muted);
   font-size: 11px;
+}
+
+.symbol-legend {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.symbol-legend div {
+  padding: 9px 10px;
+  border: 1px solid var(--v0-line);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.symbol-legend dt {
+  color: var(--v0-navy);
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.symbol-legend dd {
+  margin: 3px 0 0;
+  color: var(--v0-muted);
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  .symbol-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.assumption-note {
+  margin-top: 12px;
+  padding-left: 12px;
+  border-left: 3px solid var(--v0-yellow);
 }
 
 .objective-equation {
@@ -935,7 +980,7 @@
   position: absolute;
   inset: 0;
   background: transparent;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .tutorial-card {

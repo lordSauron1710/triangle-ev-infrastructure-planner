@@ -37,7 +37,7 @@ export const v0Scenarios: V0Scenario[] = [
     name: "Increased demand and operating cost",
     change: "Demand +20–30%; operating cost +10–15%.",
     reportNote:
-      "Higher demand increases operating cost, while the recorded installation cost falls because capacity is concentrated into fewer installations.",
+      "The recorded cost is lower than baseline, but two saved station-period rows allocate ports while the station variable is inactive. Treat this result as a sensitivity output that requires feasibility validation.",
     total: 481550,
     installation: 340000,
     operating: 108050,
@@ -52,7 +52,7 @@ export const v0Scenarios: V0Scenario[] = [
     name: "Reduced capacity and higher expansion cost",
     change: "Capacity −20–30%; expansion cost +20%.",
     reportNote:
-      "Reduced capacity changes the installation pattern while keeping total cost below the baseline result.",
+      "Reduced capacity and higher expansion cost produce a recorded total below the baseline result.",
     total: 515250,
     installation: 410000,
     operating: 79330,
@@ -110,11 +110,18 @@ export const demandByPeriod = [
 
 export const baselineRows = [
   { location: "Location 1", installed: [1, 1, 1], allocated: [10, 12, 15], added: [10, 2, 3] },
-  { location: "Location 2", installed: [1, 1, 1], allocated: [15, 18, 20], added: [15, 3, 2] },
-  { location: "Location 3", installed: [1, 1, 1], allocated: [20, 25, 30], added: [20, 5, 5] },
+  { location: "Location 2", installed: [1, 1, 1], allocated: [15, 18, 20], added: [0, 3, 2] },
+  { location: "Location 3", installed: [1, 1, 1], allocated: [20, 25, 30], added: [0, 5, 5] },
 ];
 
 export const formulationRows = [
+  {
+    title: "Initial period",
+    summary: "Initial allocation equals initial additions.",
+    equation: "Yⱼ₁ = Zⱼ₁",
+    detail:
+      "The report states that ports available in the first period must be introduced as first-period additions. The saved baseline output does not preserve this condition for every location, which is noted in planned validation work.",
+  },
   {
     title: "Demand satisfaction",
     summary: "Meet demand at every location and period.",
@@ -148,7 +155,8 @@ export const formulationRows = [
 export const sourceNotes = [
   "Problem framing and formulation: Project Report, Abstract through Problem Description and Mathematical Formulation.",
   "Input cost, capacity, and demand tables: Workbook Sheet3 rows 1–5 and Project Report Dataset section.",
-  "Scenario cost outputs: Workbook Sheet3 rows 34–44.",
-  "Scenario parameter changes: Workbook Sheet3 rows 42–45 and Project Report Numerical Study section.",
-  "Planned improvements: Project Report Conclusion and future-work paragraph.",
+  "Scenario cost outputs: Workbook Sheet3 rows 29, 32, 35, and 38; summary rows 41–44.",
+  "Scenario parameter changes: Workbook Sheet3 rows 41–44 and Project Report Numerical Study section.",
+  "Validation and persistence improvements: limitations identified by comparing the report formulation with the workbook's saved outputs.",
+  "Renewable integration, government incentives, and dynamic pricing: Project Report future-work paragraph.",
 ];

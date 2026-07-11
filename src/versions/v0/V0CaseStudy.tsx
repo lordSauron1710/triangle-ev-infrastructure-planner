@@ -4,6 +4,7 @@ import workbookUrl from "../../../archive/v0/original-excel-model.xlsx?url";
 import { FactsRail } from "./components/FactsRail";
 import { Lessons } from "./components/Lessons";
 import { ModelExplainer } from "./components/ModelExplainer";
+import { PlanningProblem } from "./components/PlanningProblem";
 import { ScenarioExplorer } from "./components/ScenarioExplorer";
 import { SourceBackedInputs } from "./components/SourceBackedInputs";
 import { SpreadsheetPreview } from "./components/SpreadsheetPreview";
@@ -25,13 +26,13 @@ export default function V0CaseStudy() {
             <h1>Plan charging capacity over time.</h1>
             <p>
               EV demand grows in stages, but infrastructure decisions carry
-              long-term cost. Explore how installation timing, port allocation,
-              and capacity expansion work together to meet demand across three
-              planning periods at the lowest total cost.
+              long-term cost. Explore how Raleigh can coordinate station
+              decisions, port allocation, and capacity expansion across three
+              planning periods while minimizing modeled system cost.
             </p>
             <div className="v0-hero-actions">
-              <a className="v0-primary-button" href="#model">
-                Explore the model
+              <a className="v0-primary-button" href="#problem">
+                Explore the planning problem
                 <ArrowDown size={16} />
               </a>
               <button
@@ -55,6 +56,7 @@ export default function V0CaseStudy() {
         </section>
 
         <FactsRail />
+        <PlanningProblem />
         <SourceBackedInputs />
         <ModelExplainer />
         <ScenarioExplorer />

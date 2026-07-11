@@ -18,6 +18,11 @@ export function SourceBackedInputs() {
           expansion cost, and capacity ceiling, while demand grows at a
           different rate in each market.
         </p>
+        <p className="assumption-note">
+          Model assumption: demand is expressed as the number of charging ports
+          required at a location in a period, so allocated ports must meet or
+          exceed that value.
+        </p>
       </div>
 
       <div className="input-tables">
@@ -29,7 +34,7 @@ export function SourceBackedInputs() {
                 <tr>
                   <th>Location</th>
                   <th>Install</th>
-                  <th>Operate / port</th>
+                  <th>Operate / port / period</th>
                   <th>Expand / port</th>
                   <th>Max ports</th>
                 </tr>

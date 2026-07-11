@@ -9,9 +9,10 @@ const demonstrated = [
 
 const planned = [
   "Use real candidate-site geography and demand-zone assignment instead of generic locations.",
+  "Correct the per-location initial-period port balance and validate every generated solution against all constraints.",
   "Represent station installation as a one-time decision that persists across periods.",
   "Build a reproducible optimization pipeline with explicit inputs and generated outputs.",
-  "Add grid, budget, service-distance, and public-data constraints for a more complete planning product.",
+  "Extend the model with renewable integration, government incentives, and dynamic pricing.",
 ];
 
 export function Lessons() {
@@ -54,9 +55,9 @@ export function Lessons() {
           <h2>Where the planning model can go next</h2>
           <p>
             The core decision structure is in place. The next step is to add
-            geographic detail, persistent installation decisions, and public
-            demand and grid data—while keeping cost, service, and operational
-            constraints visible to the planner.
+            geographic detail, persistent installation decisions, automated
+            feasibility checks, and richer energy-system assumptions—while
+            keeping cost and operational constraints visible to the planner.
           </p>
         </div>
         <TrendingUp className="planned-icon" size={34} strokeWidth={1.7} />

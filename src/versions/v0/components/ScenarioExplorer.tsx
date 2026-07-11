@@ -31,9 +31,10 @@ export function ScenarioExplorer() {
           <p className="section-kicker">Numerical study</p>
           <h2>Four scenarios, one planning model</h2>
           <p>
-            Stress-test the plan by changing demand, costs, and site capacity.
-            Each scenario reveals how those assumptions shift the cost mix,
-            total investment, and number of ports deployed.
+            Stress-test the plan by varying one or more assumptions across
+            demand, operating or expansion cost, and site capacity. Compare the
+            recorded cost mix and aggregate port decisions. Results are shown
+            as saved; any feasibility concern is identified in its scenario note.
           </p>
         </div>
         <span>Scenario sensitivity analysis</span>

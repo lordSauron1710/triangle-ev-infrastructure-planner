@@ -1,36 +1,9 @@
-import { ArrowRight } from "lucide-react";
 import { formulationRows } from "../data";
 
 export function ModelExplainer() {
   return (
-    <section className="v0-model-grid" data-tour="model">
-      <div className="planning-question" id="problem">
-        <p className="section-kicker">Operations problem</p>
-        <h2>The planning question</h2>
-        <p>
-          How should charging capacity be installed and expanded over time to
-          meet growing demand at minimum total cost? In operations-research
-          terms, this is a mixed-integer capacity-planning model with binary
-          installation decisions and integer port decisions.
-        </p>
-        <div className="planning-flow" aria-label="Planning flow">
-          {[
-            ["Installation", "Where and when to install stations"],
-            ["Capacity", "Allocate and expand ports over time"],
-            ["Demand", "Satisfy each location and period"],
-          ].map(([title, copy], index) => (
-            <div className="flow-step-wrap" key={title}>
-              <article>
-                <strong>{title}</strong>
-                <span>{copy}</span>
-              </article>
-              {index < 2 && <ArrowRight size={18} aria-hidden="true" />}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="formulation-panel" id="model">
+    <section className="v0-model-grid model-only" id="model" data-tour="model">
+      <div className="formulation-panel">
         <p className="section-kicker">Mathematical formulation</p>
         <h2>Turning the decision into a model</h2>
         <p className="formula-label">
@@ -39,6 +12,14 @@ export function ModelExplainer() {
         <div className="objective-equation" aria-label="Objective function">
           min ΣⱼΣₜ (CⱼXⱼₜ + OⱼYⱼₜ + AⱼZⱼₜ)
         </div>
+        <dl className="symbol-legend" aria-label="Model symbol definitions">
+          <div><dt>j, t</dt><dd>location and planning period</dd></div>
+          <div><dt>X</dt><dd>binary station-active decision</dd></div>
+          <div><dt>Y</dt><dd>ports allocated</dd></div>
+          <div><dt>Z</dt><dd>ports added</dd></div>
+          <div><dt>D, M</dt><dd>required ports and site capacity</dd></div>
+          <div><dt>C, O, A</dt><dd>installation, operating, and expansion cost</dd></div>
+        </dl>
         <div className="constraint-list">
           {formulationRows.map((row) => (
             <details key={row.title}>
