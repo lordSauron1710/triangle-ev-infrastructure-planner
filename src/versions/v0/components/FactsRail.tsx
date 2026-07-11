@@ -1,7 +1,7 @@
 import { CalendarDays, MapPin, SlidersHorizontal, TableProperties } from "lucide-react";
 
 const facts = [
-  { value: "3", label: "synthetic locations", icon: MapPin },
+  { value: "3", label: "candidate locations", icon: MapPin },
   { value: "3", label: "planning periods", icon: CalendarDays },
   { value: "3", label: "decision variables", icon: SlidersHorizontal },
   { value: "4", label: "scenarios", icon: TableProperties },

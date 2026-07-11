@@ -3,12 +3,15 @@ import { formulationRows } from "../data";
 
 export function ModelExplainer() {
   return (
-    <section className="v0-model-grid">
+    <section className="v0-model-grid" data-tour="model">
       <div className="planning-question" id="problem">
+        <p className="section-kicker">Operations problem</p>
         <h2>The planning question</h2>
         <p>
           How should charging capacity be installed and expanded over time to
-          meet growing demand at minimum total cost?
+          meet growing demand at minimum total cost? In operations-research
+          terms, this is a mixed-integer capacity-planning model with binary
+          installation decisions and integer port decisions.
         </p>
         <div className="planning-flow" aria-label="Planning flow">
           {[
@@ -28,6 +31,7 @@ export function ModelExplainer() {
       </div>
 
       <div className="formulation-panel" id="model">
+        <p className="section-kicker">Mathematical formulation</p>
         <h2>The archived formulation</h2>
         <p className="formula-label">
           Excel Solver model · objective: minimize reported total cost

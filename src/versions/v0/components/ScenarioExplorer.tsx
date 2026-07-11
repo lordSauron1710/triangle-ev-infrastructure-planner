@@ -13,6 +13,7 @@ export function ScenarioExplorer() {
   const [selectedKey, setSelectedKey] = useState<ScenarioKey>("A");
   const scenario =
     v0Scenarios.find((item) => item.key === selectedKey) ?? v0Scenarios[0];
+  const maxScenarioCost = Math.max(...v0Scenarios.map((item) => item.total));
 
   const shares = useMemo(
     () => ({
@@ -24,17 +25,18 @@ export function ScenarioExplorer() {
   );
 
   return (
-    <section className="scenario-section" id="scenarios">
+    <section className="scenario-section" id="scenarios" data-tour="scenarios">
       <div className="scenario-heading">
         <div>
+          <p className="section-kicker">Numerical study</p>
           <h2>Four scenarios, one planning model</h2>
           <p>
-            The workbook changed demand, costs, and capacity to observe how the
-            reported cost structure moved. These are archived workbook outputs,
-            not validated recommendations.
+            The workbook changes demand, costs, and capacity to observe how
+            total cost and port decisions move. The charts below are computed
+            directly from the workbook’s recorded scenario outputs.
           </p>
         </div>
-        <span>Archived workbook outputs</span>
+        <span>Workbook Sheet3 rows 34–45</span>
       </div>
 
       <div className="scenario-tabs" role="tablist" aria-label="Version zero scenarios">
@@ -57,6 +59,7 @@ export function ScenarioExplorer() {
         <div>
           <p className="scenario-name">{scenario.name}</p>
           <p className="scenario-change">{scenario.change}</p>
+          <p className="scenario-note">{scenario.reportNote}</p>
           <div className="donut-wrap">
             <div
               className="cost-donut"
@@ -97,6 +100,32 @@ export function ScenarioExplorer() {
           </div>
         </div>
       </div>
+
+      <div className="scenario-comparison" aria-label="Scenario comparison chart">
+        {v0Scenarios.map((item) => (
+          <article key={item.key} className={item.key === selectedKey ? "selected" : ""}>
+            <div>
+              <strong>{item.key}</strong>
+              <span>{currency(item.total)}</span>
+            </div>
+            <div className="bar-track">
+              <span style={{ width: `${(item.total / maxScenarioCost) * 100}%` }} />
+            </div>
+            <dl>
+              <div>
+                <dt>Allocated</dt>
+                <dd>{item.portsAllocated} ports</dd>
+              </div>
+              <div>
+                <dt>Added</dt>
+                <dd>{item.portsAdded} ports</dd>
+              </div>
+            </dl>
+          </article>
+        ))}
+      </div>
+
+      <p className="scenario-source">{scenario.source}</p>
     </section>
   );
 }

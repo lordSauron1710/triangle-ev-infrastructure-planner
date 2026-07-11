@@ -1,4 +1,4 @@
-import { ArrowRight, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function V0Header() {
@@ -11,24 +11,19 @@ export function V0Header() {
         EV Infrastructure Planner
       </Link>
 
-      <nav className="version-nav" aria-label="Project versions">
+      <nav className="version-nav" aria-label="Project context">
         <Link className="selected" to="/v0" aria-current="page">
-          v0 · Capacity model
+          Capacity planning model
         </Link>
-        <Link to="/v1">v1 · Interactive planner</Link>
       </nav>
 
       <nav className="v0-section-nav" aria-label="Walkthrough sections">
         <a href="#problem">Problem</a>
+        <a href="#inputs">Inputs</a>
         <a href="#model">Model</a>
         <a href="#scenarios">Scenarios</a>
-        <a href="#lessons">Lessons</a>
+        <a href="#lessons">Planned improvements</a>
       </nav>
-
-      <Link className="v0-v1-button" to="/v1">
-        Open v1 planner
-        <ArrowRight size={16} />
-      </Link>
     </header>
   );
 }

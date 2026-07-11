@@ -1,5 +1,4 @@
-import { AlertCircle, ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { AlertCircle, CheckCircle2, ClipboardList, TrendingUp } from "lucide-react";
 
 const demonstrated = [
   "Established a multi-period structure for installation, operating, and expansion decisions.",
@@ -8,16 +7,16 @@ const demonstrated = [
   "Created a compact planning artifact that can be inspected on the web.",
 ];
 
-const boundaries = [
-  "Geographic assignment between demand zones and candidate sites.",
-  "One-time installation decisions that persist across periods.",
-  "Complete capacity, port-flow, and decision-domain constraints.",
-  "Grid limits, public-data inputs, and reproducible code execution.",
+const planned = [
+  "Use real candidate-site geography and demand-zone assignment instead of generic locations.",
+  "Represent station installation as a one-time decision that persists across periods.",
+  "Rebuild the Solver logic in reproducible code with explicit data inputs and generated outputs.",
+  "Add grid, budget, service-distance, and public-data constraints for a more complete planning product.",
 ];
 
 export function Lessons() {
   return (
-    <section className="lessons-section" id="lessons">
+    <section className="lessons-section" id="lessons" data-tour="lessons">
       <div className="lessons-columns">
         <article>
           <h2>
@@ -36,10 +35,10 @@ export function Lessons() {
         <article>
           <h2>
             <AlertCircle size={23} />
-            Scope boundaries
+            Planned improvements
           </h2>
           <ul>
-            {boundaries.map((item) => (
+            {planned.map((item) => (
               <li key={item}>
                 <span aria-hidden="true" />
                 {item}
@@ -49,20 +48,19 @@ export function Lessons() {
         </article>
       </div>
 
-      <div className="v1-transition">
-        <TrendingUp size={38} strokeWidth={1.6} />
+      <div className="planned-transition">
+        <ClipboardList size={38} strokeWidth={1.6} />
         <div>
-          <h2>Two independent planning views.</h2>
+          <h2>What this page is setting up next.</h2>
           <p>
-            v0 publishes the archived workbook as a guided web walkthrough. v1
-            is a separate interactive planner with its own data, assumptions,
-            and model logic.
+            The workbook proves the structure of the planning problem. The next
+            iteration should improve data realism, model persistence, and
+            reproducibility without changing the core story: capacity decisions
+            should be evaluated through cost, demand, and operational
+            constraints.
           </p>
         </div>
-        <Link to="/v1">
-          Continue to v1
-          <ArrowRight size={18} />
-        </Link>
+        <TrendingUp className="planned-icon" size={34} strokeWidth={1.7} />
       </div>
     </section>
   );
