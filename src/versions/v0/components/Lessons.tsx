@@ -5,14 +5,14 @@ const demonstrated = [
   "Established a multi-period structure for installation, operating, and expansion decisions.",
   "Made the cost trade-offs visible through four numerical scenarios.",
   "Connected an EV infrastructure question to a mixed-integer formulation.",
-  "Created a concrete starting point for a more realistic planning product.",
+  "Created a compact planning artifact that can be inspected on the web.",
 ];
 
-const fixes = [
+const boundaries = [
   "Geographic assignment between demand zones and candidate sites.",
   "One-time installation decisions that persist across periods.",
   "Complete capacity, port-flow, and decision-domain constraints.",
-  "Reproducible code, grid limits, public data, and interactive exploration.",
+  "Grid limits, public-data inputs, and reproducible code execution.",
 ];
 
 export function Lessons() {
@@ -36,10 +36,10 @@ export function Lessons() {
         <article>
           <h2>
             <AlertCircle size={23} />
-            What v1 needed to fix
+            Scope boundaries
           </h2>
           <ul>
-            {fixes.map((item) => (
+            {boundaries.map((item) => (
               <li key={item}>
                 <span aria-hidden="true" />
                 {item}
@@ -52,10 +52,11 @@ export function Lessons() {
       <div className="v1-transition">
         <TrendingUp size={38} strokeWidth={1.6} />
         <div>
-          <h2>From spreadsheet exercise to decision product.</h2>
+          <h2>Two independent planning views.</h2>
           <p>
-            v0 showed the value of structured optimization. v1 turns it into a
-            reproducible, geographic planning experience.
+            v0 publishes the archived workbook as a guided web walkthrough. v1
+            is a separate interactive planner with its own data, assumptions,
+            and model logic.
           </p>
         </div>
         <Link to="/v1">

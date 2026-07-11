@@ -154,7 +154,7 @@ def solve_scenario(data: dict[str, Any], scenario: dict[str, Any]) -> dict[str, 
         )
         model += phase_capex <= scenario["phase_budget_m"]
 
-        if phase < scenario["first_upgrade_phase"]:
+        if phase < scenario["upgrade_start_phase"]:
             for site_id in site_ids:
                 model += upgrade[site_id][phase] == 0
 

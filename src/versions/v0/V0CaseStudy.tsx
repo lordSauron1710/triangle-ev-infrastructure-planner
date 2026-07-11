@@ -15,11 +15,11 @@ export default function V0CaseStudy() {
       <main>
         <section className="v0-hero">
           <div className="v0-hero-copy">
-            <h1>The first model: plan charging capacity over time.</h1>
+            <h1>Plan charging capacity over time.</h1>
             <p>
-              A three-location Excel Solver model built to explore installation,
-              operating, and expansion decisions for a hypothetical Raleigh EV
-              charging network.
+              A three-location Excel Solver model converted into an interactive
+              walkthrough for installation, operating, and expansion decisions
+              in a hypothetical Raleigh EV charging network.
             </p>
             <div className="v0-hero-actions">
               <a className="v0-primary-button" href="#model">
@@ -28,7 +28,7 @@ export default function V0CaseStudy() {
               </a>
               <a className="v0-secondary-button" href={workbookUrl} download>
                 <Download size={16} />
-                Download original workbook
+                Download archived workbook
               </a>
             </div>
           </div>
@@ -42,9 +42,8 @@ export default function V0CaseStudy() {
       </main>
       <footer className="v0-footer">
         <span>
-          Original ISE 501 team project · Fall 2024 · NC State · Sandeep
-          Vangara, Raveena Rajeswari Pandiyaraj, Astha Pund, Saumitra Ranjan,
-          Syed Aakif Zaid
+          Archived workbook · Sandeep Vangara, Raveena Rajeswari Pandiyaraj,
+          Astha Pund, Saumitra Ranjan, Syed Aakif Zaid
         </span>
         <span>Workbook preserved unchanged in archive/v0</span>
       </footer>

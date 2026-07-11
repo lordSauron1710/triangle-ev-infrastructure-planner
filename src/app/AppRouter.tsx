@@ -39,7 +39,7 @@ function NotFound() {
   return (
     <main className="not-found">
       <p>That page is not part of this case study.</p>
-      <Link to="/v0">Start with the original model</Link>
+      <Link to="/v0">Open the capacity model</Link>
       <Link to="/v1">Open the interactive planner</Link>
     </main>
   );

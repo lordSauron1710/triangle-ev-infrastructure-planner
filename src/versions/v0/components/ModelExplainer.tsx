@@ -28,9 +28,9 @@ export function ModelExplainer() {
       </div>
 
       <div className="formulation-panel" id="model">
-        <h2>The intended v0 formulation</h2>
+        <h2>The archived formulation</h2>
         <p className="formula-label">
-          Excel Solver prototype · objective: minimize reported total cost
+          Excel Solver model · objective: minimize reported total cost
         </p>
         <div className="objective-equation" aria-label="Objective function">
           min ΣⱼΣₜ (CⱼXⱼₜ + OⱼYⱼₜ + AⱼZⱼₜ)

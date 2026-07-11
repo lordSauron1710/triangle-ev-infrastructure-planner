@@ -3,20 +3,20 @@
 A versioned operations-research portfolio case study about EV charging
 infrastructure planning.
 
-The repository preserves the original NC State ISE 501 Excel model as v0 and
-shows how it evolved into a reproducible, code-first decision product in v1.
-The two experiences are deliberately separate but share one React application.
+The repository publishes the EV Charging Capacity Planning Model as an
+interactive v0 walkthrough and keeps v1 as a separate code-first planning
+dashboard. The two experiences are independent routes within one React
+application.
 
 ## Version map
 
 | Route | Experience | Purpose |
 | --- | --- | --- |
-| `/v0` | Original model walkthrough | Explain the Excel Solver prototype, formulation, historical scenarios, and lessons |
-| `/v1` | Interactive planner | Explore the rebuilt geographic, grid-aware planning model |
+| `/v0` | EV Charging Capacity Planning Model | Explain the Excel Solver formulation, assumptions, scenario outputs, and limitations |
+| `/v1` | Interactive planner | Explore a separate geographic, grid-aware planning model |
 | `/` | v1 alias | Preserve the original dashboard entry route |
 
-The unchanged team workbook and full attribution remain in
-[`archive/v0`](archive/v0).
+The unchanged workbook and provenance notes remain in [`archive/v0`](archive/v0).
 
 ## Product story
 
@@ -55,12 +55,12 @@ npm run preview
 src/
   app/             Router and route-level loading
   versions/
-    v0/            Excel-model walkthrough, interactions, and styles
+    v0/            EV charging capacity model walkthrough, interactions, and styles
     v1/            Interactive planner, data, and sensitivity logic
 model/
   data/           Auditable optimization inputs
   optimize.py     Multi-period mixed-integer model
-archive/v0/       Original team Excel model and provenance
+archive/v0/       Preserved Excel workbook and provenance
 design/           Accepted v0 and v1 design concepts
 ```
 
@@ -93,10 +93,8 @@ build.
 Planned public inputs include NREL Alternative Fuel Stations data, Census or
 employment demand proxies, traffic counts, and NCDOT NEVI corridor data.
 
-## Academic provenance
+## Archive notes
 
-The original course workbook was produced by Sandeep Vangara, Raveena
-Rajeswari Pandiyaraj, Astha Pund, Saumitra Ranjan, and Syed Aakif Zaid for ISE
-501 at NC State. It is preserved unchanged in [`archive/v0`](archive/v0). The
-v0 website presents it as a historical prototype—not as a validated facility
-location study or as Sandeep's individual work.
+The workbook in [`archive/v0`](archive/v0) is preserved unchanged with its
+source attribution. The v0 website converts that workbook into a web-based
+walkthrough; it is not presented as a validated facility-location study.

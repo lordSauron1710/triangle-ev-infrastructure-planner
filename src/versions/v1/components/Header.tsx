@@ -14,7 +14,7 @@ export function Header() {
           <span>EV Infrastructure Planner</span>
         </Link>
         <Link className="version-link" to="/v0">
-          v0 story
+          v0 archive
         </Link>
       </div>
 

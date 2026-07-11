@@ -13,7 +13,7 @@ export function V0Header() {
 
       <nav className="version-nav" aria-label="Project versions">
         <Link className="selected" to="/v0" aria-current="page">
-          v0 · Original model
+          v0 · Capacity model
         </Link>
         <Link to="/v1">v1 · Interactive planner</Link>
       </nav>

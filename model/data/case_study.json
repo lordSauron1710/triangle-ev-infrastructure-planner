@@ -153,7 +153,7 @@
       "max_drive_miles": 20,
       "max_new_sites_per_phase": 1,
       "grid_capacity_multiplier": 1.0,
-      "first_upgrade_phase": 0
+      "upgrade_start_phase": 0
     },
     {
       "id": "accelerated",
@@ -162,7 +162,7 @@
       "max_drive_miles": 20,
       "max_new_sites_per_phase": 2,
       "grid_capacity_multiplier": 1.0,
-      "first_upgrade_phase": 0
+      "upgrade_start_phase": 0
     },
     {
       "id": "grid-delay",
@@ -171,7 +171,7 @@
       "max_drive_miles": 20,
       "max_new_sites_per_phase": 1,
       "grid_capacity_multiplier": 0.5,
-      "first_upgrade_phase": 3
+      "upgrade_start_phase": 3
     },
     {
       "id": "capital-constrained",
@@ -180,7 +180,7 @@
       "max_drive_miles": 20,
       "max_new_sites_per_phase": 1,
       "grid_capacity_multiplier": 1.0,
-      "first_upgrade_phase": 0
+      "upgrade_start_phase": 0
     }
   ]
 }

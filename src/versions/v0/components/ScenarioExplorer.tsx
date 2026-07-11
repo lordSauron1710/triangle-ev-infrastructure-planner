@@ -27,11 +27,11 @@ export function ScenarioExplorer() {
     <section className="scenario-section" id="scenarios">
       <div className="scenario-heading">
         <div>
-          <h2>Four scenarios, one model</h2>
+          <h2>Four scenarios, one planning model</h2>
           <p>
             The workbook changed demand, costs, and capacity to observe how the
-            reported cost structure moved. These are historical prototype
-            outputs, not validated recommendations.
+            reported cost structure moved. These are archived workbook outputs,
+            not validated recommendations.
           </p>
         </div>
         <span>Archived workbook outputs</span>

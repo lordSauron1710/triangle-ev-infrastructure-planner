@@ -1,4 +1,4 @@
-# Version 0 — Original Excel model
+# Version 0 — EV Charging Capacity Planning Model
 
 `original-excel-model.xlsx` is the unmodified optimization workbook produced for
 the Fall 2024 ISE 501 course project at NC State.
@@ -16,10 +16,10 @@ The workbook was created as a team deliverable by:
 - Saumitra Ranjan
 - Syed Aakif Zaid
 
-It is archived here to show the project's starting point. It should not be
+It is archived here as a preserved source artifact. It should not be
 interpreted as the current model implementation or as Sandeep's individual
-work. The `src/` and `model/` directories contain the subsequent code-first
-portfolio rebuild.
+work. The `src/` and `model/` directories contain separate web and optimization
+work.
 
 ## Known limitations
 
@@ -29,4 +29,4 @@ portfolio rebuild.
 - Missing persistence and several incomplete Solver constraints
 - Scenario outputs maintained manually
 
-These limitations motivate the v1 rebuild.
+These limitations define the archive's scope.
