@@ -4,13 +4,13 @@ const demonstrated = [
   "Established a multi-period structure for installation, operating, and expansion decisions.",
   "Made the cost trade-offs visible through four numerical scenarios.",
   "Connected an EV infrastructure question to a mixed-integer formulation.",
-  "Created a compact planning artifact that can be inspected on the web.",
+  "Made the planning logic and scenario trade-offs easy to inspect.",
 ];
 
 const planned = [
   "Use real candidate-site geography and demand-zone assignment instead of generic locations.",
   "Represent station installation as a one-time decision that persists across periods.",
-  "Rebuild the Solver logic in reproducible code with explicit data inputs and generated outputs.",
+  "Build a reproducible optimization pipeline with explicit inputs and generated outputs.",
   "Add grid, budget, service-distance, and public-data constraints for a more complete planning product.",
 ];
 
@@ -51,13 +51,12 @@ export function Lessons() {
       <div className="planned-transition">
         <ClipboardList size={38} strokeWidth={1.6} />
         <div>
-          <h2>What this page is setting up next.</h2>
+          <h2>Where the planning model can go next</h2>
           <p>
-            The workbook proves the structure of the planning problem. The next
-            iteration should improve data realism, model persistence, and
-            reproducibility without changing the core story: capacity decisions
-            should be evaluated through cost, demand, and operational
-            constraints.
+            The core decision structure is in place. The next step is to add
+            geographic detail, persistent installation decisions, and public
+            demand and grid data—while keeping cost, service, and operational
+            constraints visible to the planner.
           </p>
         </div>
         <TrendingUp className="planned-icon" size={34} strokeWidth={1.7} />

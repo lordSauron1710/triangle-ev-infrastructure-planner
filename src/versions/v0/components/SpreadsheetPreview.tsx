@@ -4,8 +4,8 @@ const periods = ["P1", "P2", "P3"];
 
 export function SpreadsheetPreview() {
   return (
-    <div className="sheet-frame" aria-label="Simplified baseline workbook model">
-      <div className="sheet-badge">Excel Solver · MILP</div>
+    <div className="sheet-frame" aria-label="Baseline capacity plan">
+      <div className="sheet-badge">Mixed-integer capacity plan</div>
       <div className="sheet-columns" aria-hidden="true">
         {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map((column) => (
           <span key={column}>{column}</span>

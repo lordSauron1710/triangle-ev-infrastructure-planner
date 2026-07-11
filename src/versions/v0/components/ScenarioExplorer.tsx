@@ -31,12 +31,12 @@ export function ScenarioExplorer() {
           <p className="section-kicker">Numerical study</p>
           <h2>Four scenarios, one planning model</h2>
           <p>
-            The workbook changes demand, costs, and capacity to observe how
-            total cost and port decisions move. The charts below are computed
-            directly from the workbook’s recorded scenario outputs.
+            Stress-test the plan by changing demand, costs, and site capacity.
+            Each scenario reveals how those assumptions shift the cost mix,
+            total investment, and number of ports deployed.
           </p>
         </div>
-        <span>Workbook Sheet3 rows 34–45</span>
+        <span>Scenario sensitivity analysis</span>
       </div>
 
       <div className="scenario-tabs" role="tablist" aria-label="Scenario outputs">
@@ -124,8 +124,6 @@ export function ScenarioExplorer() {
           </article>
         ))}
       </div>
-
-      <p className="scenario-source">{scenario.source}</p>
     </section>
   );
 }

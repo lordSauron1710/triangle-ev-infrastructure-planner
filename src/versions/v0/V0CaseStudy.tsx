@@ -24,11 +24,10 @@ export default function V0CaseStudy() {
             <p className="section-kicker">EV Charging Capacity Planning Model</p>
             <h1>Plan charging capacity over time.</h1>
             <p>
-              This walkthrough translates the original Excel Solver workbook
-              into a web story. The operations problem is to decide station
-              installation, port allocation, and port expansion over three
-              periods while minimizing installation, operating, and expansion
-              cost.
+              EV demand grows in stages, but infrastructure decisions carry
+              long-term cost. Explore how installation timing, port allocation,
+              and capacity expansion work together to meet demand across three
+              planning periods at the lowest total cost.
             </p>
             <div className="v0-hero-actions">
               <a className="v0-primary-button" href="#model">
@@ -48,7 +47,7 @@ export default function V0CaseStudy() {
               </button>
               <a className="v0-secondary-button" href={workbookUrl} download>
                 <Download size={16} />
-                Download archived workbook
+                Download model workbook
               </a>
             </div>
           </div>

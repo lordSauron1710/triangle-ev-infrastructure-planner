@@ -20,7 +20,7 @@ export const v0Scenarios: V0Scenario[] = [
     key: "A",
     shortName: "Baseline",
     name: "Baseline",
-    change: "Original demand, cost, and capacity assumptions.",
+    change: "Baseline demand, cost, and capacity assumptions.",
     reportNote:
       "Balanced installation, operation, and expansion costs with gradual port additions as demand rises.",
     total: 648350,
@@ -52,7 +52,7 @@ export const v0Scenarios: V0Scenario[] = [
     name: "Reduced capacity and higher expansion cost",
     change: "Capacity −20–30%; expansion cost +20%.",
     reportNote:
-      "Reduced capacity changes the installation pattern and keeps the total below the baseline in the workbook output.",
+      "Reduced capacity changes the installation pattern while keeping total cost below the baseline result.",
     total: 515250,
     installation: 410000,
     operating: 79330,

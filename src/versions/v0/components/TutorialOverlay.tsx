@@ -11,8 +11,8 @@ const steps = [
   {
     target: "inputs",
     eyebrow: "Data",
-    title: "Check the source inputs",
-    body: "The tables come from the workbook and report: three locations, three periods, installation cost, operating cost, expansion cost, capacity, and demand.",
+    title: "Understand the planning inputs",
+    body: "Compare three locations across three periods using installation cost, operating cost, expansion cost, site capacity, and projected demand.",
   },
   {
     target: "model",
@@ -23,14 +23,14 @@ const steps = [
   {
     target: "scenarios",
     eyebrow: "Outputs",
-    title: "Compare recorded scenario outputs",
-    body: "Use the tabs to compare the workbook’s four scenario outputs. The cost chart and port totals are computed from the same workbook values shown in the scenario table.",
+    title: "See how the plan responds",
+    body: "Use the tabs to compare four planning conditions and see how demand, cost, and capacity assumptions change the investment mix and port decisions.",
   },
   {
     target: "lessons",
     eyebrow: "Next",
     title: "Finish with interpretation and planned improvements",
-    body: "The final section separates what this model demonstrates from planned improvements such as real geography, persistent installs, public data, and a reproducible solver pipeline.",
+    body: "The final section separates what this model demonstrates from planned improvements such as real geography, persistent installs, public data, and a reproducible optimization pipeline.",
   },
 ];
 

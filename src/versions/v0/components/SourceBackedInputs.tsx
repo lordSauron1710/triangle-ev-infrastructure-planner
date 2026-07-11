@@ -10,13 +10,13 @@ export function SourceBackedInputs() {
   return (
     <section className="inputs-section" id="inputs" data-tour="inputs">
       <div className="inputs-copy">
-        <p className="section-kicker">Source data</p>
-        <h2>What the model knew before Solver ran</h2>
+        <p className="section-kicker">Planning inputs</p>
+        <h2>Costs, capacity, and demand shape the plan</h2>
         <p>
-          The workbook uses three candidate charging locations and three planning
-          periods. Each location has a station installation cost, operating cost
-          per allocated port, expansion cost per added port, and maximum port
-          capacity. Demand is specified by location and period.
+          Three candidate locations are evaluated across three periods. Each
+          location has a distinct installation cost, operating cost per port,
+          expansion cost, and capacity ceiling, while demand grows at a
+          different rate in each market.
         </p>
       </div>
 

@@ -32,9 +32,9 @@ export function ModelExplainer() {
 
       <div className="formulation-panel" id="model">
         <p className="section-kicker">Mathematical formulation</p>
-        <h2>The archived formulation</h2>
+        <h2>Turning the decision into a model</h2>
         <p className="formula-label">
-          Excel Solver model · objective: minimize reported total cost
+          Mixed-integer program · objective: minimize total system cost
         </p>
         <div className="objective-equation" aria-label="Objective function">
           min ΣⱼΣₜ (CⱼXⱼₜ + OⱼYⱼₜ + AⱼZⱼₜ)
